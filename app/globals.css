@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  
+  --color-charcoal: #0d0d0d;
+}
+
+/* Custom styles for professional aesthetic and accessibility */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom high-contrast scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 9px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffd700;
+  }
+}
+
+/* Structural utility classes */
+@layer utilities {
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.45);
+  }
+  
+  .text-stroke-amber {
+    -webkit-text-stroke: 1px rgba(255, 215, 0, 0.15);
+  }
+
+  .text-stroke-heavy {
+    -webkit-text-stroke: 1.5px rgba(255, 215, 0, 0.25);
+  }
+
+  .glass-panel {
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card-hover {
+    transition: all 400s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(255, 215, 0, 0.25);
+    background: rgba(255, 215, 0, 0.02);
+    box-shadow: 0 10px 40px -15px rgba(255, 215, 0, 0.1);
+  }
+
+  /* Scanning CRT Line texture for retro-command vibe */
+  .scanlines::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 9999;
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+    opacity: 0.12;
+  }
+}
