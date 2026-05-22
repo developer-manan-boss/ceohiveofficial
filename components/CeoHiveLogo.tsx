@@ -34,7 +34,7 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
         </filter>
         {/* Horizontal pattern lines for the golden logo segments */}
         <pattern id="gold-hatch-pattern" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
-          <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#F59E0B" strokeWidth="1" />
+          <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#dfb455" strokeWidth="1" />
         </pattern>
       </defs>
 
@@ -45,7 +45,7 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
             x="20"
             y="56"
             fill="#FFFFFF"
-            stroke="#000000"
+            stroke="#0b0f19"
             strokeWidth="1.5"
             fontFamily="system-ui, -apple-system, sans-serif"
             fontWeight="900"
@@ -59,12 +59,12 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
           <text
             x="22"
             y="58"
-            fill="#9CA3AF"
+            fill="#c5a880"
             fontFamily="system-ui, -apple-system, sans-serif"
             fontWeight="900"
             fontSize="52"
             letterSpacing="-1"
-            opacity="0.35"
+            opacity="0.3"
           >
             CE
           </text>
@@ -77,15 +77,15 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
         {/* Top-Right and Right Thick Arc segment */}
         <path
           d="M 150 14 A 26 26 0 0 1 176 40 L 162 40 A 12 12 0 0 0 150 28 Z"
-          fill="#F59E0B"
-          stroke="#00005a"
+          fill="#dfb455"
+          stroke="#0b0f19"
           strokeWidth="1"
         />
         {/* Bottom Arc with space gaps */}
         <path
           d="M 174 44 A 26 26 0 0 1 140 66 L 140 52 A 12 12 0 0 0 160 44 Z"
-          fill="#D97706"
-          stroke="#00005a"
+          fill="#b89133"
+          stroke="#0b0f19"
           strokeWidth="1"
         />
 
@@ -93,27 +93,27 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
         <path
           d="M 136 64 A 26 26 0 0 1 124 40 L 138 40 A 12 12 0 0 0 144 54 Z"
           fill="url(#gold-hatch-pattern)"
-          stroke="#F59E0B"
+          stroke="#dfb455"
           strokeWidth="1"
         />
         <path
           d="M 136 64 A 26 26 0 0 1 124 40 L 138 40 A 12 12 0 0 0 144 54 Z"
           fill="none"
-          stroke="#00005a"
+          stroke="#0b0f19"
           strokeWidth="1"
         />
 
         {/* Top-Left segment Arc */}
         <path
           d="M 126 36 A 26 26 0 0 1 146 14 L 148 28 A 12 12 0 0 0 138 36 Z"
-          fill="#EAB308"
-          stroke="#000000"
+          fill="#eedaa2"
+          stroke="#0b0f19"
           strokeWidth="1"
         />
 
         {/* Central Core Circle Dot outline */}
-        <circle cx="150" cy="40" r="14" fill="#050505" stroke="#F59E0B" strokeWidth="2" />
-        <circle cx="150" cy="40" r="6" fill="#F59E0B" />
+        <circle cx="150" cy="40" r="14" fill="#080a11" stroke="#dfb455" strokeWidth="2" />
+        <circle cx="150" cy="40" r="6" fill="#dfb455" />
       </g>
 
       {showText && (
@@ -123,7 +123,7 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
             x="175"
             y="56"
             fill="#FFFFFF"
-            stroke="#000000"
+            stroke="#0b0f19"
             strokeWidth="1.5"
             fontFamily="system-ui, -apple-system, sans-serif"
             fontWeight="900"
@@ -137,12 +137,12 @@ export default function CeoHiveLogo({ className = "", height = 36, width, showTe
           <text
             x="177"
             y="58"
-            fill="#9CA3AF"
+            fill="#c5a880"
             fontFamily="system-ui, -apple-system, sans-serif"
             fontWeight="900"
             fontSize="52"
             letterSpacing="0"
-            opacity="0.35"
+            opacity="0.3"
           >
             HIVE
           </text>

@@ -36,15 +36,15 @@ export default function AboutPage() {
     <div id="about-us-page-wrapper" className="pt-32 pb-24">
       {/* ================= SECTION 1: THE HIVE MIND NARRATIVE ================= */}
       <section className="relative px-6 sm:px-12 max-w-7xl mx-auto mb-28">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <Shield className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <Shield className="w-3.5 h-3.5 text-luxury-gold animate-pulse" />
           SYSTEM PROTOCOL // THE HIVE MIND NARRATIVE
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight text-white mb-8 uppercase leading-[0.95]">
               WE DO NOT &quot;FREELANCE&quot; <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-zinc-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold via-champagne to-zinc-500">
                 WE INFILTRATE & DOMINATE.
               </span>
             </h1>
@@ -58,13 +58,13 @@ export default function AboutPage() {
           <div className="lg:col-span-5 bg-zinc-900/40 p-8 border border-zinc-900 rounded flex flex-col justify-between">
             <div className="font-mono text-zinc-600 text-xs mb-4">SYSTEM INJECT COMMANDS</div>
             <div className="flex flex-col gap-4">
-              <div className="border-l-2 border-amber-500 pl-4">
+              <div className="border-l-2 border-luxury-gold pl-4">
                 <div className="font-mono text-xs font-bold text-white mb-1">ZERO COMMODITY BUILD</div>
                 <p className="text-xs text-zinc-400 leading-relaxed">
                   Every asset we create is custom built from bare-metal code bases. No template noise. No sluggish pre-made builders.
                 </p>
               </div>
-              <div className="border-l-2 border-amber-500 pl-4">
+              <div className="border-l-2 border-luxury-gold pl-4">
                 <div className="font-mono text-xs font-bold text-white mb-1">REGULATORY COMPLIANT FIRST</div>
                 <p className="text-xs text-zinc-400 leading-relaxed">
                   We are compliance-first pioneers. Whether it is SEBI regulatory audits, GDPR privacy policies, or WCAG 2.1 accessibility benchmarks, we commit.
@@ -82,8 +82,8 @@ export default function AboutPage() {
       {/* ================= SECTION 2: THE LEADERSHIP PILLARS ================= */}
       <section className="relative border-y border-zinc-900/65 bg-zinc-900/10 py-24 mb-28">
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
-          <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-12 flex items-center gap-1.5 justify-center">
-            <Terminal className="w-3.5 h-3.5 text-amber-500" />
+          <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-12 flex items-center gap-1.5 justify-center">
+            <Terminal className="w-3.5 h-3.5 text-luxury-gold" />
             LEADERSHIP PILLARS // AUTHORITY CHIEFS
           </div>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
               </div>
               
               <div>
-                <span className="text-amber-500 font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
+                <span className="text-luxury-gold font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
                   CHIEF EXECUTIVE ADVISOR
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-4">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-zinc-600">SYSTEM ROLES:</span>
-                  <span className="text-amber-400 font-bold">STRATEGY, COMPLIANCE AUDITS, B2B OUTREACH</span>
+                  <span className="text-luxury-gold font-bold">STRATEGY, COMPLIANCE AUDITS, B2B OUTREACH</span>
                 </div>
                 <div className="flex justify-between border-t border-zinc-900/60 pt-2 mt-1">
                   <span className="text-zinc-600">DIRECT LINE:</span>
@@ -133,7 +133,7 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/mananbansalboss/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#050505] bg-[#FFD700] hover:bg-white px-5 py-3 rounded transition-colors shrink-0"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] px-5 py-3 rounded transition-colors shrink-0"
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                   CONNECT ON LINKEDIN
@@ -159,7 +159,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <span className="text-amber-500 font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
+                <span className="text-luxury-gold font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
                   CHIEF TECHNOLOGY OFFICER
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-4">
@@ -184,7 +184,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-zinc-600">SYSTEM ROLES:</span>
-                  <span className="text-amber-400 font-bold">SYSTEMS INTEGRITY, AGENT LOOPS, QUALITY TESTING</span>
+                  <span className="text-luxury-gold font-bold">SYSTEMS INTEGRITY, AGENT LOOPS, QUALITY TESTING</span>
                 </div>
                 <div className="flex justify-between border-t border-zinc-900/60 pt-2 mt-1">
                   <span className="text-zinc-600">SYS CORE STATUS:</span>
@@ -195,7 +195,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full mt-2">
                 <Link
                   href="/contact"
-                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#050505] bg-[#FFD700] hover:bg-white px-5 py-3 rounded transition-colors text-center shrink-0"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] px-5 py-3 rounded transition-colors text-center shrink-0"
                 >
                   <Cpu className="w-3.5 h-3.5 animate-spin" />
                   INITIATE CTO ALIGNMENT
@@ -216,8 +216,8 @@ export default function AboutPage() {
 
       {/* ================= SECTION 3: OPERATIONAL FOOTPRINT ================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-12 mb-28">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <Globe className="w-3.5 h-3.5 text-amber-500" />
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <Globe className="w-3.5 h-3.5 text-luxury-gold" />
           GLOBAL RECOGNITION // SYSTEM REGIONS
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-white mb-6 uppercase">
@@ -234,7 +234,7 @@ export default function AboutPage() {
               onClick={() => setActiveFocalPoint("india")}
               className={`p-5 rounded text-left border transition-all cursor-pointer ${
                 activeFocalPoint === "india"
-                  ? "bg-amber-400 border-amber-400 text-black font-bold"
+                  ? "bg-luxury-gold border-luxury-gold text-black font-bold"
                   : "bg-zinc-900/30 border-zinc-800/80 text-zinc-400 hover:border-zinc-700"
               }`}
             >
@@ -248,7 +248,7 @@ export default function AboutPage() {
               onClick={() => setActiveFocalPoint("usa")}
               className={`p-5 rounded text-left border transition-all cursor-pointer ${
                 activeFocalPoint === "usa"
-                  ? "bg-amber-400 border-amber-400 text-black font-bold"
+                  ? "bg-luxury-gold border-luxury-gold text-black font-bold"
                   : "bg-zinc-900/30 border-zinc-800/80 text-zinc-400 hover:border-zinc-700"
               }`}
             >
@@ -262,7 +262,7 @@ export default function AboutPage() {
               onClick={() => setActiveFocalPoint("europe")}
               className={`p-5 rounded text-left border transition-all cursor-pointer ${
                 activeFocalPoint === "europe"
-                  ? "bg-amber-400 border-amber-400 text-black font-bold"
+                  ? "bg-luxury-gold border-luxury-gold text-black font-bold"
                   : "bg-zinc-900/30 border-zinc-800/80 text-zinc-400 hover:border-zinc-700"
               }`}
             >
@@ -276,7 +276,7 @@ export default function AboutPage() {
           <div className="lg:col-span-8 bg-zinc-900/20 p-8 rounded border border-zinc-900 flex flex-col justify-between min-h-[300px]">
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-zinc-900 pb-4 mb-6">
-                <span className="font-mono text-sm font-bold text-amber-400">
+                <span className="font-mono text-sm font-bold text-luxury-gold">
                   {focalPointData[activeFocalPoint].location}
                 </span>
                 <span className="font-mono text-xs text-zinc-500">
@@ -297,7 +297,7 @@ export default function AboutPage() {
             </div>
             <div className="border-t border-zinc-900/80 pt-4 mt-6 text-xs font-mono text-zinc-500 flex justify-between">
               <span>SYSTEM CHANNELS OPERABILITY: 100% SECURE</span>
-              <span className="text-amber-500 font-bold">READY TO DEPLOY</span>
+              <span className="text-luxury-gold font-bold">READY TO DEPLOY</span>
             </div>
           </div>
         </div>
@@ -305,8 +305,8 @@ export default function AboutPage() {
 
       {/* ================= SECTION 4: THE OPERATIONAL DISCIPLINE ================= */}
       <section className="max-w-7xl mx-auto px-6 sm:px-12">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <LayoutGrid className="w-3.5 h-3.5 text-amber-500" />
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <LayoutGrid className="w-3.5 h-3.5 text-luxury-gold" />
           NUCLEUS STANDARDS // THE DISCIPLINES
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-white mb-12 uppercase">
@@ -315,7 +315,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="glass-panel p-6 rounded border border-zinc-800/60">
-            <span className="text-amber-400 font-mono font-bold text-xs">V01 // SECURITY</span>
+            <span className="text-luxury-gold font-mono font-bold text-xs">V01 // SECURITY</span>
             <h3 className="font-mono text-sm font-bold text-white mt-3 mb-2 uppercase">SEBI SECURE frontend</h3>
             <p className="font-sans text-xs text-zinc-450 leading-relaxed">
               We design frontends matching rigorous financial security standards, bypassing audit violations smoothly as demonstrated in our 39-hour deadline dispatch.
@@ -323,7 +323,7 @@ export default function AboutPage() {
           </div>
 
           <div className="glass-panel p-6 rounded border border-zinc-800/60">
-            <span className="text-amber-400 font-mono font-bold text-xs">V02 // ACCESSIBLE</span>
+            <span className="text-luxury-gold font-mono font-bold text-xs">V02 // ACCESSIBLE</span>
             <h3 className="font-mono text-sm font-bold text-white mt-3 mb-2 uppercase">WCAG 2.1 AA Compliant</h3>
             <p className="font-sans text-xs text-zinc-450 leading-relaxed">
               We build client systems fully accessible to keyboard inputs, screen readers, contrast variations, and assistive technologies.
@@ -331,7 +331,7 @@ export default function AboutPage() {
           </div>
 
           <div className="glass-panel p-6 rounded border border-zinc-800/60">
-            <span className="text-amber-400 font-mono font-bold text-xs">V03 // AUTOMATION</span>
+            <span className="text-luxury-gold font-mono font-bold text-xs">V03 // AUTOMATION</span>
             <h3 className="font-mono text-sm font-bold text-white mt-3 mb-2 uppercase">Agentic AI Workflows</h3>
             <p className="font-sans text-xs text-zinc-450 leading-relaxed">
               No simple keyword bots. We structure custom offline and cloud automated multi-agent chains that handle real, deep tasks dynamically.
@@ -339,7 +339,7 @@ export default function AboutPage() {
           </div>
 
           <div className="glass-panel p-6 rounded border border-zinc-800/60">
-            <span className="text-amber-400 font-mono font-bold text-xs">V04 // LOCALIZATION</span>
+            <span className="text-luxury-gold font-mono font-bold text-xs">V04 // LOCALIZATION</span>
             <h3 className="font-mono text-sm font-bold text-white mt-3 mb-2 uppercase">Multilingual Dubbing</h3>
             <p className="font-sans text-xs text-zinc-450 leading-relaxed">
               Using state-of-the-art neural cloning patterns, we dub rich media assets, preserving vocal structures and micro-timbres seamlessly.

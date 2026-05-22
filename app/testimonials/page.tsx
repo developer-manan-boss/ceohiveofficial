@@ -55,9 +55,9 @@ export default function TestimonialsPage() {
     <div id="testimonials-page-wrapper" className="pt-32 pb-24">
       {/* ================= HERO INTRO ================= */}
       <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-16">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-amber-500" />
-          SYSTEM ACCREDIT ATION // VOICES OF AUTHORITY
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <ShieldCheck className="w-3.5 h-3.5 text-luxury-gold" />
+          SYSTEM ACCREDITATION // VOICES OF AUTHORITY
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight text-white mb-6 uppercase leading-none">
           SYSTEM COMPLIANCE VERDICT
@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
           {TESTIMONIALS_DATA.map((t, index) => (
             <div
               key={index}
-              className={`bg-[#0b0b0ef5] border border-zinc-900 rounded p-8 sm:p-10 flex flex-col justify-between hover:border-amber-500/20 transition-all relative ${t.gridClass} overflow-hidden shadow-xl group`}
+              className={`bg-[#0b0b0ef5] border border-zinc-900 rounded p-8 sm:p-10 flex flex-col justify-between hover:border-luxury-gold/20 transition-all relative ${t.gridClass} overflow-hidden shadow-xl group`}
             >
               {/* Massive background quote glyph */}
               <Quote className="absolute -top-4 -right-4 w-32 h-32 text-zinc-900/15 pointer-events-none stroke-[0.3]" />
@@ -81,10 +81,10 @@ export default function TestimonialsPage() {
               <div>
                 <div className="flex justify-between items-center mb-6 pl-1 border-b border-zinc-900/80 pb-3">
                   <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-amber-500 animate-pulse" />
+                    <MapPin className="w-3 h-3 text-luxury-gold animate-pulse" />
                     REGION: {t.region} CLIENT NODE
                   </span>
-                  <span className="font-mono text-[9px] text-[#FFD700]">AUTHENTIC LOG // V0{index + 1}</span>
+                  <span className="font-mono text-[9px] text-luxury-gold">AUTHENTIC LOG // V0{index + 1}</span>
                 </div>
 
                 {/* Main large text content */}
@@ -108,7 +108,7 @@ export default function TestimonialsPage() {
                     href={t.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[10px] text-amber-500 hover:text-white font-mono tracking-widest uppercase transition-colors"
+                    className="flex items-center gap-1 text-[10px] text-luxury-gold hover:text-white font-mono tracking-widest uppercase transition-colors"
                   >
                     <Linkedin className="w-3.5 h-3.5" />
                     Verify Node
@@ -122,7 +122,7 @@ export default function TestimonialsPage() {
 
       {/* ================= EXTRA VERDICT BANNER ================= */}
       <section className="px-6 sm:px-12 max-w-4xl mx-auto mt-32 text-center relative z-10 border border-dashed border-zinc-850 p-8 sm:p-12 bg-zinc-950/40 rounded">
-        <HelpCircle className="w-8 h-8 text-amber-500 mx-auto mb-4 animate-bounce" />
+        <HelpCircle className="w-8 h-8 text-luxury-gold mx-auto mb-4 animate-bounce" />
         <h3 className="font-mono text-sm font-bold text-white uppercase tracking-widest mb-2">
           HAVE STRUCTURAL INQUIRIES?
         </h3>
@@ -131,7 +131,7 @@ export default function TestimonialsPage() {
         </p>
         <Link
           href="/contact"
-          className="font-mono text-[10px] text-zinc-900 bg-amber-400 hover:bg-white px-6 py-3 rounded tracking-widest font-extrabold uppercase transition-colors"
+          className="font-mono text-[10px] text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] px-6 py-3 rounded tracking-widest font-extrabold uppercase transition-colors"
         >
           Initiate Contact Now
         </Link>

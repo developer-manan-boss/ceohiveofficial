@@ -78,7 +78,7 @@ export default function CustomCursor() {
     <>
       {/* 1. Core cursor pointer point */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-amber-400 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-2.5 h-2.5 bg-luxury-gold rounded-full pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: cursorX,
           y: cursorY,
@@ -92,7 +92,7 @@ export default function CustomCursor() {
       />
       {/* 2. Trailing halo outer ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-amber-500/50 rounded-full pointer-events-none z-[9998]"
+        className="fixed top-0 left-0 w-8 h-8 border border-luxury-gold/50 rounded-full pointer-events-none z-[9998]"
         style={{
           x: ringX,
           y: ringY,
@@ -101,8 +101,8 @@ export default function CustomCursor() {
         }}
         animate={{
           scale: hovered ? 1.8 : 1.0,
-          backgroundColor: hovered ? "rgba(255, 215, 0, 0.08)" : "rgba(255, 215, 0, 0)",
-          borderColor: hovered ? "rgba(255, 215, 0, 0.9)" : "rgba(255, 215, 0, 0.45)",
+          backgroundColor: hovered ? "rgba(223, 180, 85, 0.08)" : "rgba(223, 180, 85, 0)",
+          borderColor: hovered ? "rgba(223, 180, 85, 0.9)" : "rgba(223, 180, 85, 0.45)",
           width: hovered ? "48px" : "32px",
           height: hovered ? "48px" : "32px",
         }}

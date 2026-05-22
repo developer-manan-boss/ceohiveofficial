@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body
-        className="font-sans bg-[#050505] text-zinc-100 min-h-screen relative antialiased selection:bg-amber-400 selection:text-black overflow-x-hidden"
+        className="font-sans bg-[#080a11] text-zinc-100 min-h-screen relative antialiased selection:bg-[#dfb455] selection:text-black overflow-x-hidden"
         suppressHydrationWarning
       >
         {/* Core trailing high-ticket cursor */}

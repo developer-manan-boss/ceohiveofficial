@@ -105,8 +105,8 @@ export default function ProjectsPage() {
     <div id="projects-page-root" className="pt-32 pb-24">
       {/* ================= HERO TITLE ================= */}
       <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-16">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-amber-500" />
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <ShieldCheck className="w-3.5 h-3.5 text-luxury-gold" />
           SYSTEM METRICS // SELECTED CASE STUDIES
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight text-white mb-6 uppercase leading-none">
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveFilter(filter as any)}
                 className={`px-3 py-1.5 text-xs font-mono rounded cursor-pointer transition-all ${
                   activeFilter === filter
-                    ? "bg-amber-400 text-black font-bold"
+                    ? "bg-luxury-gold text-black font-bold"
                     : "bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700"
                 }`}
               >
@@ -153,7 +153,7 @@ export default function ProjectsPage() {
                 onClick={() => setActiveCategory(cat as any)}
                 className={`px-3 py-1.5 text-xs font-mono rounded cursor-pointer transition-all ${
                   activeCategory === cat
-                    ? "bg-amber-400 text-black font-bold"
+                    ? "bg-luxury-gold text-black font-bold"
                     : "bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700"
                 }`}
               >
@@ -176,7 +176,7 @@ export default function ProjectsPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
-                className={`bg-[#0a0a0dfb] border border-zinc-900 rounded p-6 sm:p-8 flex flex-col justify-between shadow-lg hover:border-amber-500/20 transition-all group ${
+                className={`bg-[#0a0a0dfb] border border-zinc-900 rounded p-6 sm:p-8 flex flex-col justify-between shadow-lg hover:border-luxury-gold/20 transition-all group ${
                   project.isMystery ? "border-dashed border-zinc-850" : ""
                 }`}
               >
@@ -184,7 +184,7 @@ export default function ProjectsPage() {
                   {/* Top line indicator */}
                   <div className="flex justify-between items-center border-b border-zinc-900 pb-4 mb-6">
                     <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-amber-500" />
+                      <MapPin className="w-3 h-3 text-luxury-gold" />
                       COORDINATE: {project.region} NODE
                     </span>
                     <span className="font-mono text-[9px] text-zinc-500 uppercase bg-zinc-950 px-2 py-0.5 rounded">
@@ -194,14 +194,14 @@ export default function ProjectsPage() {
 
                   {project.isMystery ? (
                     <div className="flex gap-1.5 items-center px-1.5 py-0.5 rounded bg-zinc-900 text-white border border-zinc-800 mb-4 inline-block w-fit">
-                      <ShieldCheck className="w-3 h-3 text-amber-400 animate-pulse" />
+                      <ShieldCheck className="w-3 h-3 text-luxury-gold animate-pulse" />
                       <span className="font-mono text-[9px] font-bold tracking-widest uppercase">
                         CLASSIFIED B2B PROTOCOL
                       </span>
                     </div>
                   ) : null}
 
-                  <h3 className="font-mono text-lg font-bold text-white mb-2 group-hover:text-[#FFD700] transition-colors uppercase">
+                  <h3 className="font-mono text-lg font-bold text-white mb-2 group-hover:text-luxury-gold transition-colors uppercase animate-none">
                     {project.title}
                   </h3>
                   <div className="font-sans text-xs text-zinc-500 uppercase tracking-wide mb-6">
@@ -246,7 +246,7 @@ export default function ProjectsPage() {
                     <span className="font-mono text-[8px] text-zinc-500 uppercase tracking-widest block">
                       RESULT CERTIFIED INTEGRITY
                     </span>
-                    <span className="font-mono text-[10px] text-amber-400 font-bold block mt-0.5 uppercase tracking-tight">
+                    <span className="font-mono text-[10px] text-luxury-gold font-bold block mt-0.5 uppercase tracking-tight">
                       {project.metrics}
                     </span>
                   </div>
@@ -256,7 +256,7 @@ export default function ProjectsPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono text-[10px] text-zinc-100 hover:text-amber-400 flex items-center gap-1 uppercase transition-colors"
+                      className="font-mono text-[10px] text-zinc-100 hover:text-luxury-gold flex items-center gap-1 uppercase transition-colors"
                     >
                       Audit
                       <ExternalLink className="w-3.5 h-3.5" />

@@ -62,7 +62,7 @@ export default function EntrySequence({ onComplete }: EntrySequenceProps) {
       {!complete && (
         <motion.div
           id="entry-sequence-container"
-          className="fixed inset-0 bg-[#050505] z-50 flex flex-col justify-between p-6 sm:p-12 font-mono text-[#FFD700]"
+          className="fixed inset-0 bg-[#080a11] z-50 flex flex-col justify-between p-6 sm:p-12 font-mono text-luxury-gold"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -200 }}
           transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
@@ -70,7 +70,7 @@ export default function EntrySequence({ onComplete }: EntrySequenceProps) {
           {/* Top telemetry indicators */}
           <div className="flex justify-between items-center text-xs opacity-60">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-luxury-gold animate-ping" />
               <span>TERMINAL SECURE SEC-CH-UA</span>
             </div>
             <div>UTC TIME: {utcTime || "LOADING..."}</div>
@@ -78,7 +78,7 @@ export default function EntrySequence({ onComplete }: EntrySequenceProps) {
 
           {/* Central System logs */}
           <div className="max-w-3xl w-full mx-auto flex flex-col gap-3 sm:gap-4 my-auto">
-            <div className="text-zinc-600 text-xs mb-2 select-none">
+            <div className="text-zinc-650 text-xs mb-2 select-none">
               &gt;_ SYSTEM BOOT COMPILING CODES // VER 26.5.22
             </div>
 
@@ -89,16 +89,16 @@ export default function EntrySequence({ onComplete }: EntrySequenceProps) {
                 <motion.div
                   key={idx}
                   className={`text-xs sm:text-sm md:text-base leading-relaxed font-mono ${
-                    isMajor ? "text-amber-400 font-bold tracking-wider pt-2" : "text-zinc-300"
+                    isMajor ? "text-luxury-gold font-bold tracking-wider pt-2" : "text-zinc-350"
                   }`}
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <span className="text-amber-500 mr-2 select-none">❯</span>
+                  <span className="text-luxury-gold mr-2 select-none">❯</span>
                   {line}
                   {isLast && (
-                    <span className="inline-block w-2 h-4 ml-1 bg-amber-500 animate-pulse align-middle" />
+                    <span className="inline-block w-2 h-4 ml-1 bg-luxury-gold animate-pulse align-middle" />
                   )}
                 </motion.div>
               );
@@ -107,13 +107,13 @@ export default function EntrySequence({ onComplete }: EntrySequenceProps) {
 
           {/* Skip buttons & telemetry footers */}
           <div className="flex justify-between items-end text-xs w-full">
-            <div className="text-zinc-600 hidden sm:block">
+            <div className="text-zinc-650 hidden sm:block">
               SYS INTEGRITY: HIGH // CORRIDOR SECURED [IN, US, EU]
             </div>
             <button
               onClick={handleSkip}
               id="skip-boot-button"
-              className="text-amber-500 hover:text-white border border-amber-500/25 hover:border-amber-400 px-4 py-2 bg-amber-500/5 backdrop-blur-sm rounded cursor-pointer transition-all duration-300 ml-auto tracking-wide font-bold"
+              className="text-luxury-gold hover:text-white border border-luxury-gold/25 hover:border-luxury-gold px-4 py-2 bg-luxury-gold/5 backdrop-blur-sm rounded cursor-pointer transition-all duration-300 ml-auto tracking-wide font-bold"
             >
               SKIP SECURE INTRO ➔
             </button>

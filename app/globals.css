@@ -4,7 +4,14 @@
   --font-sans: var(--font-sans), system-ui, sans-serif;
   --font-mono: var(--font-mono), monospace;
   
-  --color-charcoal: #0d0d0d;
+  --color-charcoal: #0e121e;
+  --color-obsidian: #080a11;
+  --color-obsidian-deep: #05060a;
+  --color-luxury-gold: #dfb455;
+  --color-luxury-gold-dark: #b89133;
+  --color-oxford: #101422;
+  --color-oxford-light: #182033;
+  --color-champagne: #f4efdf;
 }
 
 /* Custom styles for professional aesthetic and accessibility */
@@ -18,57 +25,57 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom high-contrast scrollbar */
+  /* Custom high-contrast scrollbar conforming to custom luxury format */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #050505;
+    background: #05060a;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #222222;
+    background: #182033;
     border-radius: 9px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #ffd700;
+    background: #dfb455;
   }
 }
 
 /* Structural utility classes */
 @layer utilities {
   .text-glow-gold {
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.45);
+    text-shadow: 0 0 15px rgba(223, 180, 85, 0.4);
   }
   
   .text-stroke-amber {
-    -webkit-text-stroke: 1px rgba(255, 215, 0, 0.15);
+    -webkit-text-stroke: 1px rgba(223, 180, 85, 0.15);
   }
 
   .text-stroke-heavy {
-    -webkit-text-stroke: 1.5px rgba(255, 215, 0, 0.25);
+    -webkit-text-stroke: 1.5px rgba(223, 180, 85, 0.25);
   }
 
   .glass-panel {
-    background: rgba(10, 10, 10, 0.75);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(16, 20, 34, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(223, 180, 85, 0.1);
   }
 
   .glass-card-hover {
-    transition: all 400s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card-hover:hover {
-    border-color: rgba(255, 215, 0, 0.25);
-    background: rgba(255, 215, 0, 0.02);
-    box-shadow: 0 10px 40px -15px rgba(255, 215, 0, 0.1);
+    border-color: rgba(223, 180, 85, 0.3);
+    background: rgba(223, 180, 85, 0.03);
+    box-shadow: 0 10px 42px -15px rgba(223, 180, 85, 0.15);
   }
 
-  /* Scanning CRT Line texture for retro-command vibe */
+  /* Scanning CRT Line texture for ultra-high-end digital operational command feel */
   .scanlines::after {
     content: " ";
     display: block;
@@ -77,10 +84,10 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(18, 22, 34, 0) 50%, rgba(5, 6, 10, 0.25) 50%), linear-gradient(90deg, rgba(223, 180, 85, 0.02), rgba(255, 255, 255, 0.01), rgba(16, 20, 34, 0.03));
     z-index: 9999;
     background-size: 100% 4px, 6px 100%;
     pointer-events: none;
-    opacity: 0.12;
+    opacity: 0.1;
   }
 }

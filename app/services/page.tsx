@@ -148,8 +148,8 @@ export default function ServicesPage() {
     <div id="services-page-root" className="pt-32 pb-24">
       {/* ================= HERO INTRO ================= */}
       <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-20">
-        <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-          <Shield className="w-3.5 h-3.5 text-amber-500" />
+        <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+          <Shield className="w-3.5 h-3.5 text-luxury-gold" />
           SYSTEM PROTOCOLS // SYSTEM CAPABILITIES
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight text-white mb-6 uppercase leading-none">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                   onClick={() => handleScrollToService(spec.id)}
                   className="flex items-center gap-3 w-full text-left font-mono text-xs text-zinc-400 hover:text-white px-3 py-3 rounded hover:bg-zinc-950 transition-all cursor-pointer group"
                 >
-                  <Icon className="w-4 h-4 text-zinc-600 group-hover:text-amber-500 transition-colors" />
+                  <Icon className="w-4 h-4 text-zinc-600 group-hover:text-luxury-gold transition-colors" />
                   <span className="uppercase tracking-wider group-hover:translate-x-1 transition-transform truncate">
                     {spec.name.replace("Architecture", "").replace("Development", "")}
                   </span>
@@ -199,12 +199,12 @@ export default function ServicesPage() {
                 className="bg-[#0b0b0e] border border-zinc-900/80 rounded p-8 sm:p-10 flex flex-col justify-between shadow-lg relative group overflow-hidden"
               >
                 {/* Visual hover grid deco */}
-                <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-[#FFD700]/[0.02] to-transparent h-20 pointer-events-none" />
+                <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-luxury-gold/[0.02] to-transparent h-20 pointer-events-none" />
 
                 <div>
                   <div className="flex justify-between items-start border-b border-zinc-900 pb-5 mb-6">
                     <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 flex items-center justify-center border border-amber-500/20 bg-amber-500/5 rounded text-amber-400">
+                      <div className="w-10 h-10 flex items-center justify-center border border-luxury-gold/20 bg-luxury-gold/5 rounded text-luxury-gold">
                         <Icon className="w-4.5 h-4.5 animate-pulse" />
                       </div>
                       <h2 className="font-mono text-lg sm:text-xl font-bold text-white uppercase tracking-tight">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {spec.included.map((inc, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-zinc-400 font-sans">
-                          <CheckCircle2 className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-luxury-gold shrink-0 mt-0.5" />
                           <span>{inc}</span>
                         </div>
                       ))}
@@ -249,9 +249,9 @@ export default function ServicesPage() {
 
                     <Link
                       href={spec.caseStudyHref}
-                      className="text-[10px] font-mono text-amber-500 hover:text-white flex items-center gap-1 transition-colors bg-zinc-950 border border-zinc-850 px-3 py-1.5 rounded"
+                      className="text-[10px] font-mono text-luxury-gold hover:text-white flex items-center gap-1 transition-colors bg-zinc-950 border border-zinc-850 px-3 py-1.5 rounded"
                     >
-                      <FileCode className="w-3 h-3 text-amber-400" />
+                      <FileCode className="w-3 h-3 text-luxury-gold" />
                       View Related Build
                     </Link>
                   </div>
@@ -260,7 +260,7 @@ export default function ServicesPage() {
                 <div className="mt-8 border-t border-zinc-930 pt-6">
                   <Link
                     href={`/contact?service=${spec.id}`}
-                    className="group inline-flex items-center gap-1.5 font-mono text-xs font-bold tracking-widest text-[#050505] bg-amber-400 hover:bg-white px-6 py-3 rounded cursor-pointer transition-colors"
+                    className="group inline-flex items-center gap-1.5 font-mono text-xs font-bold tracking-widest text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] px-6 py-3 rounded cursor-pointer transition-colors"
                   >
                     DEPLOY THIS SERVICE
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

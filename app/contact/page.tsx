@@ -71,20 +71,50 @@ export default function ContactPage() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
     setSubmissionState("sending");
 
-    // Simulate elite network transmission uplink (1.5s delay)
-    setTimeout(() => {
-      // Generate a stylized checksum code
-      const hash = Math.floor(Math.random() * 899999 + 100000);
-      setSecureUplinkCode(`CH-UL-${formData.region.toUpperCase()}-${hash}`);
-      setSubmissionState("success");
-    }, 1600);
+    try {
+      const response = await fetch("https://formspree.io/f/xbdbygbg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          region: formData.region,
+          services: selectedServices.join(", "),
+          budget: formData.budget || "Not Specified",
+          howFound: formData.howFound || "Not Specified",
+          message: formData.brief,
+        }),
+      });
+
+      if (response.ok) {
+        // Generate a stylized checksum code
+        const hash = Math.floor(Math.random() * 899999 + 100000);
+        setSecureUplinkCode(`CH-UL-${formData.region.toUpperCase()}-${hash}`);
+        setSubmissionState("success");
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        setFormErrors({
+          submit: errorData.error || "Uplink transmission rejected by endpoint. Please try again.",
+        });
+        setSubmissionState("idle");
+      }
+    } catch (err: any) {
+      setFormErrors({
+        submit: "Uplink connection failed. Check your network routing integrity and try again.",
+      });
+      setSubmissionState("idle");
+    }
   };
 
   // 3D wireframe render inside left panel
@@ -107,7 +137,7 @@ export default function ContactPage() {
     // Floating double wireframe icosahedron (Sacred alignment vibe)
     const innerGeo = new THREE.IcosahedronGeometry(1.2, 1);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0xffd700,
+      color: 0xdfb455,
       wireframe: true,
       transparent: true,
       opacity: 0.15,
@@ -117,7 +147,7 @@ export default function ContactPage() {
 
     const outerGeo = new THREE.IcosahedronGeometry(1.8, 1);
     const outerMat = new THREE.MeshBasicMaterial({
-      color: 0xffd700,
+      color: 0xdfb455,
       wireframe: true,
       transparent: true,
       opacity: 0.05,
@@ -181,13 +211,13 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
         {/* ================= LEFT SIDE: COORDINATES INFO ================= */}
         <div className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-28">
-          <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
-            <Terminal className="w-3.5 h-3.5 text-amber-500" />
+          <div className="text-luxury-gold font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-1.5">
+            <Terminal className="w-3.5 h-3.5 text-luxury-gold" />
             COMMUNICATION DIRECTIVES // CENTRAL UPLINK
           </div>
           <h1 className="text-3xl sm:text-5xl font-black font-mono tracking-tight text-white mb-6 uppercase leading-[0.95]">
             INITIATE COORDINATE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold via-champagne to-white">
               CONTACT NOW.
             </span>
           </h1>
@@ -196,7 +226,7 @@ export default function ContactPage() {
           </p>
 
           <div className="flex flex-col gap-5 w-full bg-[#0a0a0df3] border border-zinc-900 rounded p-6 sm:p-8 mb-8">
-            <span className="font-mono text-[9px] text-[#FFD700] uppercase tracking-widest border-b border-zinc-900 pb-2 mb-2 block">
+            <span className="font-mono text-[9px] text-[#dfb455] uppercase tracking-widest border-b border-zinc-900 pb-2 mb-2 block">
               PREFERRED CONNECTION CORE
             </span>
 
@@ -207,14 +237,14 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="flex items-start gap-3 group"
             >
-              <div className="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-black transition-colors mt-0.5 shrink-0">
+              <div className="w-8 h-8 rounded bg-luxury-gold/10 border border-luxury-gold/30 flex items-center justify-center text-luxury-gold group-hover:bg-luxury-gold group-hover:text-black transition-colors mt-0.5 shrink-0">
                 <Linkedin className="w-4 h-4" />
               </div>
               <div>
                 <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest block">
                   Most Preferred Connection
                 </span>
-                <span className="font-sans text-sm text-zinc-200 group-hover:text-amber-400 transition-colors flex items-center font-bold">
+                <span className="font-sans text-sm text-zinc-200 group-hover:text-luxury-gold transition-colors flex items-center font-bold">
                   Connect on LinkedIn
                   <ArrowUpRight className="w-3.5 h-3.5 ml-1 opacity-60 group-hover:opacity-100 transition-opacity" />
                 </span>
@@ -223,7 +253,7 @@ export default function ContactPage() {
 
             {/* Emails */}
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mt-0.5 shrink-0">
+              <div className="w-8 h-8 rounded bg-luxury-gold/10 border border-luxury-gold/30 flex items-center justify-center text-luxury-gold mt-0.5 shrink-0">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
@@ -232,7 +262,7 @@ export default function ContactPage() {
                 </span>
                 <a
                   href="mailto:ceohive.enquiry@gmail.com"
-                  className="font-sans text-xs text-zinc-300 hover:text-amber-400 font-bold transition-colors mt-0.5"
+                  className="font-sans text-xs text-zinc-300 hover:text-luxury-gold font-bold transition-colors mt-0.5"
                 >
                   ceohive.enquiry@gmail.com
                 </a>
@@ -241,7 +271,7 @@ export default function ContactPage() {
                 </span>
                 <a
                   href="mailto:mananbansal.founder@gmail.com"
-                  className="font-sans text-xs text-zinc-300 hover:text-amber-400 font-bold transition-colors mt-0.5"
+                  className="font-sans text-xs text-zinc-300 hover:text-luxury-gold font-bold transition-colors mt-0.5"
                 >
                   mananbansal.founder@gmail.com
                 </a>
@@ -250,7 +280,7 @@ export default function ContactPage() {
 
             {/* Operations */}
             <div className="flex items-start gap-3 pt-2">
-              <div className="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mt-0.5 shrink-0">
+              <div className="w-8 h-8 rounded bg-luxury-gold/10 border border-luxury-gold/30 flex items-center justify-center text-luxury-gold mt-0.5 shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
@@ -279,7 +309,7 @@ export default function ContactPage() {
         {/* ================= RIGHT SIDE: FORM CONSOLE ================= */}
         <div className="lg:col-span-7 w-full bg-[#0a0a0df6] border border-zinc-900 rounded p-6 sm:p-10 shadow-2xl relative">
           <div className="absolute top-4 right-4 flex items-center gap-1.5 text-zinc-600 font-mono text-[9px]">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500/60 animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-luxury-gold/60 animate-pulse"></span>
             TRANS CONSOLE SECURE
           </div>
 
@@ -302,7 +332,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="e.g. Alexis Carter"
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
                     />
                     {formErrors.name && (
                       <span className="text-[10px] text-red-400 font-mono">{formErrors.name}</span>
@@ -319,7 +349,7 @@ export default function ContactPage() {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="e.g. Apex Alpha Corp"
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
                     />
                     {formErrors.company && (
                       <span className="text-[10px] text-red-400 font-mono">{formErrors.company}</span>
@@ -339,7 +369,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="e.g. alexis@apexalpha.io"
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans"
                     />
                     {formErrors.email && (
                       <span className="text-[10px] text-red-400 font-mono">{formErrors.email}</span>
@@ -354,7 +384,7 @@ export default function ContactPage() {
                       name="region"
                       value={formData.region}
                       onChange={handleInputChange}
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
                     >
                       <option value="">-- CHOOSE REGION NODE --</option>
                       <option value="in">INDIA NODE (HQ)</option>
@@ -391,7 +421,7 @@ export default function ContactPage() {
                           type="checkbox"
                           checked={selectedServices.includes(item.id)}
                           onChange={() => handleCheckboxChange(item.id)}
-                          className="accent-amber-400 w-3.5 h-3.5 cursor-pointer rounded bg-zinc-900"
+                          className="accent-luxury-gold w-3.5 h-3.5 cursor-pointer rounded bg-zinc-900"
                         />
                         <span>{item.label}</span>
                       </label>
@@ -412,7 +442,7 @@ export default function ContactPage() {
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
                     >
                       <option value="">-- CHOOSE INVESTMENT --</option>
                       <option value="under5k">&lt;$5,000 USD</option>
@@ -430,7 +460,7 @@ export default function ContactPage() {
                       name="howFound"
                       value={formData.howFound}
                       onChange={handleInputChange}
-                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
+                      className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 outline-none transition-colors font-mono cursor-pointer"
                     >
                       <option value="">-- CHOOSE SOURCE --</option>
                       <option value="linkedin">LinkedIn Authority profile</option>
@@ -453,7 +483,7 @@ export default function ContactPage() {
                     value={formData.brief}
                     onChange={handleInputChange}
                     placeholder="Briefly state your strategic product needs, deadline tolerances, and regulatory compliance benchmarks..."
-                    className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-amber-500 text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans resize-none"
+                    className="bg-zinc-950 border border-zinc-850 hover:border-zinc-700 focus:border-luxury-gold text-zinc-100 text-xs rounded px-4 py-3 placeholder-zinc-700 outline-none transition-colors font-sans resize-none"
                   />
                   <div className="flex justify-between items-center mt-0.5">
                     {formErrors.brief ? (
@@ -472,10 +502,16 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   id="transmit-inquiry-button"
-                  className="group flex items-center justify-center gap-1.5 font-mono text-xs font-bold tracking-widest text-[#050505] bg-amber-400 hover:bg-white py-4 rounded cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] select-none text-center mt-4"
+                  className="group flex items-center justify-center gap-1.5 font-mono text-xs font-bold tracking-widest text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] py-4 rounded cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(223,180,85,0.3)] select-none text-center mt-4"
                 >
                   TRANSMIT DIGITAL INQUIRY➔
                 </button>
+
+                {formErrors.submit && (
+                  <div className="text-[11px] text-red-400 font-mono text-center block mt-2 border border-red-500/20 bg-red-500/5 py-2.5 px-4 rounded">
+                    ⚠️ {formErrors.submit}
+                  </div>
+                )}
               </form>
             )}
 
@@ -486,7 +522,7 @@ export default function ContactPage() {
                 exit={{ opacity: 0 }}
                 className="flex flex-col items-center justify-center py-24 text-center font-mono"
               >
-                <Loader2 className="w-12 h-12 text-[#FFD700] animate-spin mb-6" />
+                <Loader2 className="w-12 h-12 text-luxury-gold animate-spin mb-6" />
                 <span className="text-sm font-bold text-white tracking-widest block mb-2">
                   TRANSMITTING ENCRYPTED INQUIRY DATA CONTROLS...
                 </span>
@@ -509,8 +545,8 @@ export default function ContactPage() {
 
                 <div className="bg-zinc-950 p-4 border border-zinc-900 rounded w-full flex flex-col gap-2 text-[11px]">
                   <div>
-                    <span className="text-zinc-600 uppercase mr-2 font-bold">CHECKSUM CODE:</span>
-                    <span className="text-amber-400 font-bold">{secureUplinkCode}</span>
+                    <span className="text-zinc-650 uppercase mr-2 font-bold">CHECKSUM CODE:</span>
+                    <span className="text-luxury-gold font-bold">{secureUplinkCode}</span>
                   </div>
                   <div>
                     <span className="text-zinc-600 uppercase mr-2 font-bold">OPERATOR ID:</span>
@@ -551,7 +587,7 @@ export default function ContactPage() {
                     setFormErrors({});
                     setSubmissionState("idle");
                   }}
-                  className="font-mono text-[#FFD700] hover:text-white mt-6 transition-colors border border-amber-500/30 px-4 py-2 bg-amber-500/5 rounded cursor-pointer"
+                  className="font-mono text-luxury-gold hover:text-white mt-6 transition-colors border border-luxury-gold/30 px-4 py-2 bg-luxury-gold/5 rounded cursor-pointer"
                 >
                   &lt; TRANST MIT ANOTHER QUERY
                 </button>

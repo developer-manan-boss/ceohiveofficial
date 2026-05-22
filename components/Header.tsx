@@ -68,7 +68,7 @@ export default function Header() {
           visible ? "top-0" : "-top-24"
         } ${
           scrolled
-            ? "py-4 bg-[#0a0a0ae6] backdrop-blur-lg border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
+            ? "py-4 bg-[#080a11e6] backdrop-blur-lg border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
             : "py-6 bg-transparent"
         }`}
       >
@@ -91,8 +91,8 @@ export default function Header() {
                   <span className="relative z-10">{link.name}</span>
                   {/* Underline animates center-out */}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-amber-500 transition-all duration-300 ease-out group-hover:w-full ${
-                      isActive ? "w-full bg-amber-500" : ""
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-luxury-gold transition-all duration-300 ease-out group-hover:w-full ${
+                      isActive ? "w-full bg-luxury-gold" : ""
                     }`}
                   />
                 </Link>
@@ -104,7 +104,7 @@ export default function Header() {
           <div className="hidden md:flex items-center">
             <Link
               href="/contact"
-              className="group flex items-center gap-1.5 font-mono text-[11px] font-bold tracking-widest text-[#050505] bg-amber-400 hover:bg-white px-5 py-2.5 rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] select-none cursor-pointer"
+              className="group flex items-center gap-1.5 font-mono text-[11px] font-bold tracking-widest text-[#05060a] bg-luxury-gold hover:bg-[#f4efdf] px-5 py-2.5 rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(223,180,85,0.25)] select-none cursor-pointer"
             >
               DEPLOY COMMAND
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -130,7 +130,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 bg-[#080808] z-30 flex flex-col justify-center px-10 pt-20"
+            className="fixed inset-0 bg-[#080a11] z-30 flex flex-col justify-center px-10 pt-20"
           >
             {/* Ambient mesh watermark */}
             <div className="absolute right-0 bottom-0 text-white/5 text-[15vw] font-bold tracking-widest uppercase select-none pointer-events-none">
@@ -152,8 +152,8 @@ export default function Header() {
                   >
                     <Link
                       href={link.href}
-                      className={`font-mono text-xl font-bold uppercase tracking-widest hover:text-amber-400 transition-colors ${
-                        isActive ? "text-amber-500" : "text-zinc-300"
+                      className={`font-mono text-xl font-bold uppercase tracking-widest hover:text-luxury-gold transition-colors ${
+                        isActive ? "text-luxury-gold" : "text-zinc-300"
                       }`}
                     >
                       {link.name}
@@ -169,13 +169,13 @@ export default function Header() {
               </span>
               <a
                 href="mailto:ceohive.enquiry@gmail.com"
-                className="text-xs text-zinc-400 hover:text-amber-400 font-mono tracking-wider transition-colors"
+                className="text-xs text-zinc-400 hover:text-luxury-gold font-mono tracking-wider transition-colors"
               >
                 ceohive.enquiry@gmail.com
               </a>
               <Link
                 href="/contact"
-                className="group flex items-center justify-between w-full max-w-xs text-xs font-mono font-bold tracking-widest bg-amber-500 hover:bg-white text-black px-4 py-3.5 rounded mt-2 transition-colors duration-300"
+                className="group flex items-center justify-between w-full max-w-xs text-xs font-mono font-bold tracking-widest bg-luxury-gold hover:bg-[#f4efdf] text-black px-4 py-3.5 rounded mt-2 transition-colors duration-300"
               >
                 INITIATE COMMAND PROJECT
                 <ArrowUpRight className="w-4 h-4" />
