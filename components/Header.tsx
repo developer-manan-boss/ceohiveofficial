@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { Shield, Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import CeoHiveLogo from "./CeoHiveLogo";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -73,14 +74,8 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2.5 z-50">
-            <div className="relative w-8 h-8 flex items-center justify-center border border-amber-500/40 rounded bg-amber-500/5 group-hover:border-amber-400 group-hover:bg-amber-500/10 transition-all duration-300">
-              <Shield className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-amber-500/5 blur-sm opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <span className="font-mono text-base font-black tracking-[0.25em] text-white group-hover:text-amber-400 transition-colors duration-300">
-              CEOHIVE
-            </span>
+          <Link href="/" className="group flex items-center gap-2 z-50">
+            <CeoHiveLogo height={38} width={155} className="transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           {/* Desktop Navigation */}

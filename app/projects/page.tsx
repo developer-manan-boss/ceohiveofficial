@@ -44,7 +44,7 @@ const PROJECTS_DATA: Project[] = [
       "We engineered and deployed a bulletproof server-client Next.js framework in exactly **39 hours and 28 minutes**. Handled SSL encryption schemes, high-fidelity research distribution, keyboard navigation, and structural layouts. Zero excuses.",
     tech: ["Next.js 15", "Tailwind CSS v4", "WCAG 2.1 AA Grids", "Direct SSL Certs", "Doc Distribution Systems"],
     metrics: "39h 28m Built and Dispatched. Passed SEBI Audit. zero warnings.",
-    url: "https://vipulkaushikresearchanalyst.com",
+    url: "https://vipultheresearchanalyst.com",
   },
   {
     id: "forever-capable",

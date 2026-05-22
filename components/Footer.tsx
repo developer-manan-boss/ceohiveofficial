@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Terminal, Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import CeoHiveLogo from "./CeoHiveLogo";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState<number>(2026);
@@ -27,9 +28,7 @@ export default function Footer() {
         {/* Column 1: Core Manifesto */}
         <div className="md:col-span-5 flex flex-col items-start">
           <Link href="/" className="group flex items-center gap-2 mb-6">
-            <span className="font-mono text-base font-black tracking-[0.25em] text-white">
-              CEOHIVE
-            </span>
+            <CeoHiveLogo height={32} width={130} className="transition-transform duration-300 group-hover:scale-105" />
           </Link>
           <p className="font-sans text-sm text-zinc-400 leading-relaxed max-w-xs mb-8">
             Digital infrastructure, autonomous AI agents, and cinematic post-production designed

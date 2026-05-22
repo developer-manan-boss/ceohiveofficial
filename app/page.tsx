@@ -490,7 +490,7 @@ export default function HomePage() {
                   </div>
 
                   <a
-                    href="https://vipulkaushikresearchanalyst.com"
+                    href="https://vipultheresearchanalyst.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-xs text-amber-500 hover:text-white font-mono tracking-widest font-bold uppercase transition-colors"

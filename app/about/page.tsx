@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Shield, ShieldAlert, Cpu, Terminal, Linkedin, ExternalLink, Globe, LayoutGrid, CheckSquare } from "lucide-react";
+import { Shield, ShieldAlert, Cpu, Terminal, Linkedin, ExternalLink, Globe, LayoutGrid, CheckSquare, Mail } from "lucide-react";
 
 export default function AboutPage() {
   const [activeFocalPoint, setActiveFocalPoint] = useState<"india" | "usa" | "europe">("india");
@@ -79,79 +79,135 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= SECTION 2: THE FOUNDER AUTHORITY ================= */}
+      {/* ================= SECTION 2: THE LEADERSHIP PILLARS ================= */}
       <section className="relative border-y border-zinc-900/65 bg-zinc-900/10 py-24 mb-28">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left: Founder Bio and Authority links */}
-          <div className="lg:col-span-7 flex flex-col items-start order-2 lg:order-1">
-            <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-3 flex items-center gap-1.5">
-              <Terminal className="w-3.5 h-3.5 text-amber-500" />
-              FOUNDER & MANAGING DIRECTOR AUTHORITY
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-6">
-              Manan Bansal
-            </h2>
-            <p className="font-sans text-sm sm:text-base text-zinc-300 leading-relaxed mb-6">
-              As the lead Managing Director and strategic brain behind CEOHive Digital Solutions, Manan positions systems as the ultimate truth. He maps out the high-level architectures, compliance grids, and localized voice operations that connect global target audiences directly with B2B ventures.
-            </p>
-            <p className="font-sans text-sm text-zinc-400 leading-relaxed mb-8">
-              With deep credentials spanning Google Developer certifications and a high-ticket B2B network on LinkedIn, Manan enforces a rigorous standard of performance: <strong className="text-white">&quot;Systems over trust. Execution over promises.&quot;</strong>
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full">
-              <a
-                href="https://www.linkedin.com/in/mananbansalboss/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 font-mono text-xs font-bold tracking-widest text-[#050505] bg-[#FFD700] hover:bg-white px-6 py-3 rounded transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-                CONNECT ON LINKEDIN
-                <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="https://g.dev/mananbansal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 font-mono text-xs font-bold tracking-widest text-zinc-300 hover:text-white border border-zinc-800 hover:border-zinc-500 px-6 py-3 rounded transition-all"
-              >
-                <Terminal className="w-4 h-4" />
-                GOOGLE DEVELOPER PROFILE
-                <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-              </a>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 sm:px-12">
+          <div className="text-amber-500 font-mono text-xs tracking-widest uppercase mb-12 flex items-center gap-1.5 justify-center">
+            <Terminal className="w-3.5 h-3.5 text-amber-500" />
+            LEADERSHIP PILLARS // AUTHORITY CHIEFS
           </div>
 
-          {/* Right: Premium Graphic representation of Authority mind */}
-          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-sm border border-zinc-800 p-8 rounded bg-[#0a0a0d] flex flex-col justify-between h-[360px] relative overflow-hidden group">
-              {/* Radial decor */}
-              <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-amber-500/5 to-transparent pointer-events-none" />
-
-              <div className="flex justify-between items-center text-[10px] font-mono text-zinc-650">
-                <span>FOUNDER CORE SEC-01</span>
-                <span className="text-amber-500 font-bold">MANAN BANSAL BOSS</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* COLUMN 1: MANAN BANSAL (CEO & FOUNDER) */}
+            <div className="flex flex-col gap-8 bg-zinc-950/40 p-8 sm:p-10 border border-zinc-900 rounded relative overflow-hidden group">
+              <div className="absolute top-4 right-4 text-zinc-650 font-mono text-[9px] uppercase tracking-wider">
+                CORE SEC-01 // FOUNDER CORE
+              </div>
+              
+              <div>
+                <span className="text-amber-500 font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
+                  CHIEF EXECUTIVE ADVISOR
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-4">
+                  Manan Bansal
+                </h2>
+                <div className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-6">
+                  CEO, Founder & Managing Director
+                </div>
+                <p className="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                  As the strategic brain and Managing Director behind CEOHive Digital Solutions, Manan positions architecture as the ultimate source of truth. He directs full-company client scaling, compliance grids, and localized voice operations.
+                </p>
+                <p className="font-sans text-xs text-zinc-450 leading-relaxed">
+                  With verified Google Developer credentials and an elite global B2B network on LinkedIn, Manan enforces our central directive: <strong className="text-white">&quot;Systems over trust. Execution over promises.&quot;</strong>
+                </p>
               </div>
 
-              {/* Graphic Matrix Code blocks */}
-              <div className="my-auto">
-                <span className="text-[1.5rem] font-bold font-mono text-zinc-100 uppercase tracking-tight block">
-                  SYSTEM ARCHITECT
-                </span>
-                <span className="font-mono text-[10px] text-zinc-500 block mt-2">
-                  LOC: CHANDIGARH REGION / IN-HQ CORE
-                </span>
-                <span className="font-mono text-[10px] text-zinc-500 block">
-                  SCOPE: INTERNATIONAL [IN, US, EU]
-                </span>
-                <span className="font-mono text-xs text-amber-400 mt-4 block">
-                  &gt; console.log(&quot;Execution over promises.&quot;);
-                </span>
+              {/* Founder Stats Overlay */}
+              <div className="bg-zinc-950 p-5 border border-zinc-900/80 rounded flex flex-col gap-2 font-mono text-[10px] text-zinc-450">
+                <div className="flex justify-between">
+                  <span className="text-zinc-600">COORDINATE LOC:</span>
+                  <span className="text-white">CHANDIGARH REGION / IN-HQ</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-zinc-600">SYSTEM ROLES:</span>
+                  <span className="text-amber-400 font-bold">STRATEGY, COMPLIANCE AUDITS, B2B OUTREACH</span>
+                </div>
+                <div className="flex justify-between border-t border-zinc-900/60 pt-2 mt-1">
+                  <span className="text-zinc-600">DIRECT LINE:</span>
+                  <span className="text-zinc-350 font-sans">mananbansal.founder@gmail.com</span>
+                </div>
               </div>
 
-              <div className="flex justify-between items-center border-t border-zinc-900 pt-4">
-                <span className="font-mono text-[9px] text-zinc-500 hover:text-white">LINKEDIN // 2K+ CO-STELLATION</span>
-                <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full mt-2">
+                <a
+                  href="https://www.linkedin.com/in/mananbansalboss/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#050505] bg-[#FFD700] hover:bg-white px-5 py-3 rounded transition-colors shrink-0"
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  CONNECT ON LINKEDIN
+                  <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href="https://g.dev/mananbansal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-zinc-350 hover:text-white border border-zinc-900 hover:border-zinc-700 px-5 py-3 rounded transition-all"
+                >
+                  <Terminal className="w-3.5 h-3.5" />
+                  GOOGLE PROFILE
+                  <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* COLUMN 2: AKASH (CTO & SERVICE HEAD & QUALITY CONTROL) */}
+            <div className="flex flex-col gap-8 bg-zinc-950/40 p-8 sm:p-10 border border-zinc-900 rounded relative overflow-hidden group">
+              <div className="absolute top-4 right-4 text-zinc-650 font-mono text-[9px] uppercase tracking-wider">
+                CORE SEC-02 // SYSTEM PIPELINES
+              </div>
+
+              <div>
+                <span className="text-amber-500 font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
+                  CHIEF TECHNOLOGY OFFICER
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-4">
+                  Akash
+                </h2>
+                <div className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-6">
+                  CTO, Service Head & Quality Control Chief
+                </div>
+                <p className="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                  Overseeing full-stack code pipelines and advanced production systems, Akash guides engineering logic at CEOHive. He steers automated multi-agentic AI workflows, secure API nodes, and lip-sync vocal rendering servers.
+                </p>
+                <p className="font-sans text-xs text-zinc-450 leading-relaxed">
+                  As our chief Quality Control Director, Akash maintains a zero-compromise audit baseline—personally auditing WCAG 2.1 grids, direct SSL certificates, load-balance routers, and rendering timelines.
+                </p>
+              </div>
+
+              {/* CTO Stats Overlay */}
+              <div className="bg-zinc-950 p-5 border border-zinc-900/80 rounded flex flex-col gap-2 font-mono text-[10px] text-zinc-450">
+                <div className="flex justify-between">
+                  <span className="text-zinc-600">COORDINATE LOC:</span>
+                  <span className="text-white">ASIA-PACIFIC / GLOBAL CHANNELS</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-zinc-600">SYSTEM ROLES:</span>
+                  <span className="text-amber-400 font-bold">SYSTEMS INTEGRITY, AGENT LOOPS, QUALITY TESTING</span>
+                </div>
+                <div className="flex justify-between border-t border-zinc-900/60 pt-2 mt-1">
+                  <span className="text-zinc-600">SYS CORE STATUS:</span>
+                  <span className="text-green-500 font-bold uppercase">SECURED & STRICT COMPLIANCE ACTIVE</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full mt-2">
+                <Link
+                  href="/contact"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-[#050505] bg-[#FFD700] hover:bg-white px-5 py-3 rounded transition-colors text-center shrink-0"
+                >
+                  <Cpu className="w-3.5 h-3.5 animate-spin" />
+                  INITIATE CTO ALIGNMENT
+                  <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+                <a
+                  href="mailto:ceohive.enquiry@gmail.com"
+                  className="group flex items-center justify-center gap-2 font-mono text-[10px] font-bold tracking-widest text-zinc-350 hover:text-white border border-zinc-900 hover:border-zinc-700 px-5 py-3 rounded transition-all"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  EMAIL CTO GATEWAY
+                </a>
               </div>
             </div>
           </div>
