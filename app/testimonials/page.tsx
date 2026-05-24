@@ -30,7 +30,7 @@ const TESTIMONIALS_DATA: Testimonial[] = [
     role: "Founding Board Members",
     company: "Forever Capable Platform",
     region: "India",
-    gridClass: "md:col-span-4 lg:col-span-5 md:translate-y-12",
+    gridClass: "md:col-span-4 lg:col-span-5 lg:translate-y-12",
   },
   {
     quote: "Securing modern multi-agentic workflows inside our compliance limits was our primary task. CEOHive understood the data isolation mandates perfectly. Outstanding delivery.",

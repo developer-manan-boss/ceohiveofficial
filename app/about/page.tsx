@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Shield, ShieldAlert, Cpu, Terminal, Linkedin, ExternalLink, Globe, LayoutGrid, CheckSquare, Mail } from "lucide-react";
+import mananPic from "@/src/assets/images/manan_bansal_1779531920795.png";
 
 export default function AboutPage() {
   const [activeFocalPoint, setActiveFocalPoint] = useState<"india" | "usa" | "europe">("india");
@@ -94,22 +95,37 @@ export default function AboutPage() {
                 CORE SEC-01 // FOUNDER CORE
               </div>
               
-              <div>
-                <span className="text-luxury-gold font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
-                  CHIEF EXECUTIVE ADVISOR
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-4">
-                  Manan Bansal
-                </h2>
-                <div className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-6">
-                  CEO, Founder & Managing Director
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded border border-luxury-gold/30 overflow-hidden shrink-0 bg-zinc-900/60 shadow-[0_0_20px_rgba(223,180,85,0.1)] group-hover:border-luxury-gold/60 transition-colors">
+                  <img
+                    src={mananPic.src}
+                    alt="Manan Bansal Portrait"
+                    className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-1.5 left-1.5 bg-[#05060a]/90 border border-luxury-gold/30 rounded px-1.5 py-0.5 text-[8px] font-mono text-luxury-gold tracking-widest uppercase font-bold">
+                    FOUNDER
+                  </div>
                 </div>
-                <p className="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
-                  As the strategic brain and Managing Director behind CEOHive Digital Solutions, Manan positions architecture as the ultimate source of truth. He directs full-company client scaling, compliance grids, and localized voice operations.
-                </p>
-                <p className="font-sans text-xs text-zinc-450 leading-relaxed">
-                  With verified Google Developer credentials and an elite global B2B network on LinkedIn, Manan enforces our central directive: <strong className="text-white">&quot;Systems over trust. Execution over promises.&quot;</strong>
-                </p>
+
+                <div className="flex-1">
+                  <span className="text-luxury-gold font-mono text-[10px] tracking-widest uppercase font-bold block mb-2">
+                    CHIEF EXECUTIVE ADVISOR
+                  </span>
+                  <h2 className="text-3xl sm:text-4xl font-bold font-mono text-white uppercase tracking-tight mb-2">
+                    Manan Bansal
+                  </h2>
+                  <div className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-4">
+                    CEO, Founder & Managing Director
+                  </div>
+                  <p className="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                    As the strategic brain and Managing Director behind CEOHive Digital Solutions, Manan positions architecture as the ultimate source of truth. He directs full-company client scaling, compliance grids, and localized voice operations.
+                  </p>
+                  <p className="font-sans text-xs text-zinc-450 leading-relaxed">
+                    With verified Google Developer credentials and an elite global B2B network on LinkedIn, Manan enforces our central directive: <strong className="text-white">&quot;Systems over trust. Execution over promises.&quot;</strong>
+                  </p>
+                </div>
               </div>
 
               {/* Founder Stats Overlay */}

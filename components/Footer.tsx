@@ -85,6 +85,13 @@ export default function Footer() {
               Voice Cloning Solutions
               <ArrowUpRight className="w-3 h-3 text-zinc-650 group-hover:text-luxury-gold ml-1 transition-colors" />
             </Link>
+            <Link
+              href="/pricing"
+              className="text-sm text-zinc-400 hover:text-[#dfb455] transition-colors flex items-center group font-mono text-xs"
+            >
+              Systems & Pricing Grid
+              <ArrowUpRight className="w-3 h-3 text-zinc-650 group-hover:text-luxury-gold ml-1 transition-colors" />
+            </Link>
           </nav>
         </div>
 

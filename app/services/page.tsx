@@ -19,6 +19,67 @@ import {
 
 const SERVICES_SPECS = [
   {
+    id: "proptech-3d",
+    name: "PropTech (Real Estate 3D Analytics & Customization)",
+    icon: Grid,
+    desc: "A very specialized service for international real estate developers, agencies, and builders. We convert under-construction, bare shell, unbuilt, prebuilt, or project-only properties into highly precise, immersive end-to-end 3D simulations. Realtors ke liye ye ek absolute revolutionary service aur end-to-end operational software solution hai.",
+    included: [
+      "Live 3D Walkthroughs: Under-construction ya bareshell properties ka ultra-precise, fully-rendered 3D workspace model.",
+      "AI Avatar Integration: Integrates realistic AI avatars of customer's family members inside the virtual 3D home walking and interacting live.",
+      "Hyper-Local Hyper-Data: Surrounded live traffic data, metro timetables, and even nearest tea-stall operator names integrated directly into the map dataset.",
+      "Transparency & Live Editing: Real-time tracking of raw material quality, active contractor certificates, and live material/furniture customization.",
+      "Instant 1-Click Interior PDF/BOM: Standardized extraction of a 100-200 page interior design PDF and raw Bill of Materials to turn the virtual render into reality.",
+    ],
+    ideal: "International real estate builders, high-ticket property brokers, luxury developers, and pre-sales architecture teams.",
+    caseStudyName: "Bare shell Interactive Walkthrough with Live PDF BOM Generation",
+    caseStudyHref: "/projects",
+  },
+  {
+    id: "advanced-ai-content",
+    name: "Advanced AI Content & Studio Production",
+    icon: Cpu,
+    desc: "Studio-grade neural asset pipeline for supreme global communication. Bina kisi real human presence ke, advanced-level AI avatars aur natural voice cloning solutions ke sath video and media platforms launch karna under strict regulatory safety filters.",
+    included: [
+      "Faceless Content Creation: Bina kisi real human ke, advanced level cinematic AI Avatars ke sath targeted authority content banana.",
+      "Voice Cloning & Dubbing: Studio-grade voice cloning aur natural multi-language dubbing jo bilkul real speech ki tarah natural sound kare.",
+      "High-Retention Pacing Algorithms: Custom automated script structures designed for maximum viewer engagement and audience expansion.",
+      "Multi-region distribution optimization and direct compliance sandboxing.",
+    ],
+    ideal: "B2B founders, global agencies, online tutoring academies, and multi-region commercial brands.",
+    caseStudyName: "Vipul Kaushik Automatic Content Production Shell (CEOHive original)",
+    caseStudyHref: "/projects",
+  },
+  {
+    id: "vfx-cinematics",
+    name: "Hollywood-Grade VFX & 3D Cinematic Commercials",
+    icon: Video,
+    desc: "Micro-pixel precision video editing and VFX designed to rival premium physical ad agencies. We produce breathtaking cinematic advertising assets featuring heavy visual effects, seamless CGI transitions, and professional high-end colour grading.",
+    included: [
+      "Micro-Pixel VFX: Ultra-sharpness and micro-accuracy motion tracking and object composition for raw cinematic fidelity.",
+      "Blender + AI Environment Merging: We generate 3D baseline shots in Blender and merge them using custom neural lighting grids for perfect transitions.",
+      "Enterprise Ads: Nike-level high-end ads like 'Comet' brand (featuring custom Jungle themes, Bahubali style scales, and YouTuber memes).",
+      "Studio Grade Cinema Audio: Mastered audio compression, realistic atmospheric sounds, and sound design tuned to custom systems.",
+    ],
+    ideal: "Enterprise consumer brands on modern web networks, luxury products, and high-performance agency campaigns.",
+    caseStudyName: "Comet Brand Jungle-Theme Cinematic Launch Film",
+    caseStudyHref: "/projects",
+  },
+  {
+    id: "next-gen-dev",
+    name: "Next-Gen Web & App Development (Speed + Immersive Tech)",
+    icon: Globe,
+    desc: "High-end corporate software compiled from the ground up on modern Next.js edge loops. We deploy specialized lightweight codebases that load instantly, maintain strict SEBI and GDPR compliance, and feature browser-native spatial engineering.",
+    included: [
+      "Ultra-Fast Delivery: WordPress and bespoke framework architectures built day-and-night in exact 30 hours, 29 minutes, and 48 seconds.",
+      "Video Proof of Work: Complete high-value building recordings served transparently as our ultimate marketing tool and proof of execution.",
+      "Browser-Based WebVR/AR: Lightweight 1-click WebVR integration inside the website—no external application downloads, fully accessible in the browser.",
+      "SEBI analytical platform compliance, WCAG 2.1 AA accessibility grids, and high-convert B2B lead generation loops.",
+    ],
+    ideal: "SEBI-registered financial research analysts, high-ticket scale builders, and immersive startup platforms.",
+    caseStudyName: "Vipul Kaushik SEBI-Compliant Fast Platform (Delivered in 39 hours)",
+    caseStudyHref: "/projects",
+  },
+  {
     id: "web-development",
     name: "Web Development Architecture",
     icon: Globe,
@@ -155,6 +216,10 @@ export default function ServicesPage() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-mono tracking-tight text-white mb-6 uppercase leading-none">
           ENGINEERED CAPABILITIES DEPLOYMENT
         </h1>
+        <div className="mb-8 inline-block bg-luxury-gold/5 border border-luxury-gold/20 px-4 py-2.5 rounded text-luxury-gold font-mono text-xs tracking-widest uppercase relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/10 via-transparent to-transparent animate-[pulse_3s_infinite]" />
+          &quot;We are not an expense, we are an investment.&quot;
+        </div>
         <p className="font-sans text-sm sm:text-base text-zinc-400 max-w-2xl leading-relaxed">
           We construct digital systems designed to execute flawlessly. No fluff. Below is the complete blueprints specification index of the services CEOHive deploys for elite global enterprises.
         </p>
@@ -202,16 +267,16 @@ export default function ServicesPage() {
                 <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-luxury-gold/[0.02] to-transparent h-20 pointer-events-none" />
 
                 <div>
-                  <div className="flex justify-between items-start border-b border-zinc-900 pb-5 mb-6">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-zinc-900 pb-5 mb-6">
                     <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 flex items-center justify-center border border-luxury-gold/20 bg-luxury-gold/5 rounded text-luxury-gold">
+                      <div className="w-10 h-10 flex items-center justify-center border border-luxury-gold/20 bg-luxury-gold/5 rounded text-luxury-gold shrink-0">
                         <Icon className="w-4.5 h-4.5 animate-pulse" />
                       </div>
-                      <h2 className="font-mono text-lg sm:text-xl font-bold text-white uppercase tracking-tight">
+                      <h2 className="font-mono text-base sm:text-lg md:text-xl font-bold text-white uppercase tracking-tight">
                         {spec.name}
                       </h2>
                     </div>
-                    <span className="font-mono text-[10px] text-zinc-650 bg-zinc-950 px-2 py-1 rounded">
+                    <span className="font-mono text-[9px] sm:text-[10px] text-zinc-650 bg-zinc-950 px-2 py-1 rounded shrink-0">
                       SPEC // {spec.id.toUpperCase().slice(0, 9)}
                     </span>
                   </div>

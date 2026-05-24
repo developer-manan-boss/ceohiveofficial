@@ -118,18 +118,18 @@ export default function ProjectsPage() {
       </section>
 
       {/* ================= INTERACTIVE FILTER MATRIX ================= */}
-      <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-y border-zinc-900 py-6">
+      <section className="px-6 sm:px-12 max-w-7xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-y border-zinc-900 py-6">
         {/* Region Filter */}
         <div className="flex flex-col gap-2">
           <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest font-bold">
             FILTER ROUTE REGIONS
           </span>
-          <div className="flex gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {["all", "IN", "US", "EU"].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter as any)}
-                className={`px-3 py-1.5 text-xs font-mono rounded cursor-pointer transition-all ${
+                className={`px-3 py-1.5 text-[11px] sm:text-xs font-mono rounded cursor-pointer transition-all ${
                   activeFilter === filter
                     ? "bg-luxury-gold text-black font-bold"
                     : "bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700"
@@ -146,12 +146,12 @@ export default function ProjectsPage() {
           <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest font-bold">
             FILTER SPEC PILLARS
           </span>
-          <div className="flex gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {["all", "web", "ai", "creative"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat as any)}
-                className={`px-3 py-1.5 text-xs font-mono rounded cursor-pointer transition-all ${
+                className={`px-3 py-1.5 text-[11px] sm:text-xs font-mono rounded cursor-pointer transition-all ${
                   activeCategory === cat
                     ? "bg-luxury-gold text-black font-bold"
                     : "bg-zinc-900/40 text-zinc-400 border border-zinc-800 hover:border-zinc-700"
@@ -171,7 +171,6 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                layout
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
@@ -241,7 +240,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
-                <div className="border-t border-zinc-900/80 pt-6 mt-6 flex justify-between items-center bg-zinc-900/5 px-2 py-4 rounded">
+                <div className="border-t border-zinc-900/80 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-zinc-900/5 px-2 py-4 rounded">
                   <div>
                     <span className="font-mono text-[8px] text-zinc-500 uppercase tracking-widest block">
                       RESULT CERTIFIED INTEGRITY
@@ -256,13 +255,13 @@ export default function ProjectsPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono text-[10px] text-zinc-100 hover:text-luxury-gold flex items-center gap-1 uppercase transition-colors"
+                      className="font-mono text-[10px] text-zinc-100 hover:text-luxury-gold flex items-center gap-1 uppercase transition-colors shrink-0 self-end sm:self-auto"
                     >
                       Audit
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   ) : (
-                    <span className="font-mono text-[10px] text-zinc-650 uppercase">SECURE PASS</span>
+                    <span className="font-mono text-[10px] text-zinc-650 uppercase shrink-0">SECURE PASS</span>
                   )}
                 </div>
               </motion.div>

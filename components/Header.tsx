@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
   { name: "Projects", href: "/projects" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "Contact", href: "/contact" },
@@ -53,12 +54,16 @@ export default function Header() {
 
   // Close mobile menu on route changes
   useEffect(() => {
-    if (mobileMenuOpen) {
-      setTimeout(() => {
+    let active = true;
+    setTimeout(() => {
+      if (active) {
         setMobileMenuOpen(false);
-      }, 0);
-    }
-  }, [pathname, mobileMenuOpen]);
+      }
+    }, 0);
+    return () => {
+      active = false;
+    };
+  }, [pathname]);
 
   return (
     <>
